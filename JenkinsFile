@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage(clone) {
-            steps {
-                git 'https://github.com/ravichandra9594/java-maven-app-karthik.git'
-            }
-        }
         stage(build) {
             steps {
                 sh 'mvn clean install'
