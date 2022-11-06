@@ -14,4 +14,4 @@ to run
 
 scripts/deliver.sh
 
-this is a uild trigger test
+Updating build trigger by Ravichandra V
