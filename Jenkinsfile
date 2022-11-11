@@ -1,5 +1,10 @@
 pipeline {
-	agent any
+	agent {
+		label 'slave'	
+	}
+	tools {
+		maven 'm1'	
+	}
 	stages {
 		stage('Build') {
 			steps {
