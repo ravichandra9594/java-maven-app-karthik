@@ -18,7 +18,7 @@ pipeline {
 					junit 'target/surefire-reports/*.xml'
 				}
 				success {
-					sh 'cp /var/lib/jenkins/workspace/JAVA_MAVEN_APP/target/*.jar /home/ravichandra9594/tomcat/javaMavenApp/webapps/'
+					sh 'sudo cp /var/lib/jenkins/workspace/JAVA_MAVEN_APP/target/*.jar /home/ravichandra9594/tomcat/javaMavenApp/webapps/'
 				}
 			}
 		}
