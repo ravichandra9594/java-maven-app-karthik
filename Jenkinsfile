@@ -17,9 +17,6 @@ pipeline {
 				always {
 					junit 'target/surefire-reports/*.xml'
 				}
-				success {
-					sh 'echo "Success"'
-				}
 			}
 		}
 		stage('Deliver') {
