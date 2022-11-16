@@ -1,5 +1,5 @@
 pipeline {
-	agent {label 'slave docker'}
+	agent any
 	tools {
         maven 'm1' 
     }
