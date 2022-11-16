@@ -1,6 +1,6 @@
 pipeline {
 	agent {
-		label 'slave2'	
+		label 'master'	
 	}
 	tools {
 		maven 'Maven-v3.8.6'
@@ -22,10 +22,6 @@ pipeline {
 				}
 			}
 		}
-		stage('Deliver') {
-			steps {
-				sh './scripts/deliver.sh'
-			}
-		}
+		
 	}
 }
