@@ -1,8 +1,8 @@
 pipeline {
 	agent any
 	tools {
-		maven 'Maven-v3.8.6'	
-	}
+        maven 'm1' 
+    }
 	stages {
 		stage('Build') {
 			steps {
@@ -19,10 +19,6 @@ pipeline {
 				}
 			}
 		}
-		stage('Deliver') {
-			steps {
-				sh './scripts/deliver.sh'
-			}
-		}
+		
 	}
 }
