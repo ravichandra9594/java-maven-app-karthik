@@ -9,7 +9,7 @@ to build
 
 mvn clean install
 
-
+Test
 to run
 
 scripts/deliver.sh
