@@ -21,7 +21,12 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
-				archiveArtifacts artifacts: '**/target/*.jar'
+				archiveArtifacts '**/target/*.jar'
+			}
+			post {
+				success {
+					sh 'echo "Build Successful"'	
+				}
 			}
 		}
 		
