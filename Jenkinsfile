@@ -22,6 +22,16 @@ pipeline {
 				}
 			}
 		}
+		stage('Deploy') {
+			steps {
+				archiveArtifacts '**/target/*.jar'
+			}
+			post {
+				success {
+					sh 'echo "Build Successful"'	
+				}
+			}
+		}
 		
 	}
 }
