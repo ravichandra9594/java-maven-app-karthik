@@ -28,7 +28,10 @@ pipeline {
 			}
 			post {
 				success {
-					sh 'echo "Build Successful"'	
+					mail (cc: 'ravic@classe365.com', to: 'pradi.ravi@gmail.com', 
+				     	 subject: "Job '${JOB_NAME}' (${BUILD_NUMBER}) is waiting for input"
+					body: "Please go to ${BUILD_URL} and verify the build"
+				      )
 				}
 			}
 		}
