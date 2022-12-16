@@ -26,11 +26,6 @@ pipeline {
 			steps {
 				archiveArtifacts '**/target/*.jar'
 			}
-			post {
-				success {
-					mail (cc: "ravic@sproutonweb.com", to: "pradi.ravi@gmail.com", subject: "Job '${JOB_NAME}' (${BUILD_NUMBER}) is waiting for input", body: "Please go to ${BUILD_URL} and verify the build")
-				}
-			}
 		}
 		
 	}
