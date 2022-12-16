@@ -26,7 +26,7 @@ pipeline {
 		}
 		stage ('Upload to Artifactory') {
 			steps {
-				sh 'jfrog rt upload --url http://20.235.82.247:8080/job/Artifactory/ --access-token $(ARTIFACTORY_ACCESS_TOKEN) target/demo-0.0.1-SNAPSHOT.jar java-maven-app'
+				sh 'jfrog rt upload --url http://20.235.82.247:8080/job/Artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} target/demo-0.0.1-SNAPSHOT.jar java-maven-app'
 			}
 		}
 		stage('Deploy') {
