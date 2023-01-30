@@ -44,6 +44,11 @@ stages:
 
     - upload: $(Build.ArtifactStagingDirectory)
       artifact: drop
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'pradiravidocker'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
 
 - stage: Deploy
   displayName: Deploy stage
